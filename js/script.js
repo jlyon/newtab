@@ -1,7 +1,7 @@
 $('#iframe').css('height', window.innerHeight + 'px');
 
-//$.getJSON('http://www.newtab.party/data/list.json', function( data ) {
-$.getJSON('../data/list.json', function( data ) {
+$.getJSON('http://www.newtab.party/data/list.json', function( data ) {
+//$.getJSON('../data/list.json', function( data ) {
   display(data);
 });
 
