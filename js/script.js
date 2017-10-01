@@ -1,6 +1,6 @@
 $('#iframe').css('height', window.innerHeight + 'px');
 
-
+//$.getJSON('http://www.newtab.party/data/list.json', function( data ) {
 $.getJSON('../data/list.json', function( data ) {
   display(data);
 });
@@ -83,12 +83,17 @@ function showFlickr(item) {
 
   $.getJSON( 'https://api.flickr.com/services/rest/?method=flickr.photos.getInfo&api_key=b4bfee90f8d4ee9d0b9642803e17ea13&photo_id='+ item.src +'&format=json&nojsoncallback=1', function( data ) {
     console.log(data);
+    var description = data.photo.description._content;
+    if (data.photo.location) {
+      var loc = data.photo.location.locality._content +', '+ data.photo.location.country._content;
+      description = '<div class="location"><a href="https://www.google.com/maps/?q='+ loc +'" title="View on Google Maps">'+ loc +'</a></div>' + description;
+    }
     setInfo({
       'icon': 'img/flickr.png',
       'name': data.photo.title._content,
       'author': data.photo.owner.realname ? data.photo.owner.realname : data.photo.owner.username,
       'link': data.photo.urls.url[0]._content,
-      'details': data.photo.description._conetnt
+      'details': description
     });
 
   });
@@ -111,6 +116,7 @@ function showOther(item) {
       //'background-position-y': item['background-position-y'] ? item['background-position-y'] : 'center'
     });
   }
+  $('#loading').hide();
 }
 
 

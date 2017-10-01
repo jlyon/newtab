@@ -1,0 +1,67 @@
+body {
+  height: 700px;
+  margin: 0;
+  background: no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  color: #333;
+}
+iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.info-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  -moz-border-radius-topright: 5px;
+}
+.info-container,
+a {
+  color: #333;
+}
+.loading,
+.info-line {
+  line-height: 22px;
+}
+.info-line {
+  cursor: pointer;
+}
+.details,
+.hidden {
+  display: none;
+}
+.info-container:hover {
+  background-color:rgba(255, 255, 255, 0.8);
+}
+.info-container:hover .info-line {
+  font-weight: bold;
+}
+.info-container:hover .info-line {
+  font-weight: bold;
+}
+.info-container:hover .details {
+  display: block;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+.info-container:hover .details p {
+  margin-top: 10px;
+  margin-bottom: 0;
+  max-width: 700px;
+}
+
+
+/* Suggest popup */
+a#suggest-link {
+  width: 220px;
+  text-decoration: none;
+  display: block;
+  outline: 0;
+  color: #333;
+}

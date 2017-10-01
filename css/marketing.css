@@ -1,0 +1,39 @@
+.marketing {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color:rgba(255, 255, 255, 0.7);
+  padding: 10%;
+}
+
+.marketing {
+  font-size: 150%;
+}
+
+.marketing p {
+  max-width: 600px;
+  font-size: 80%;
+}
+
+.marketing .blank {
+}
+
+.marketing ul.get {
+  margin: 0;
+  padding: 0;
+}
+
+.marketing ul.get li {
+  float: left;
+  list-style: none;
+}
+
+.marketing ul.get li a {
+  padding: 10px;
+  text-decoration: none;
+  background: #333;
+  color: #fff;
+  margin-right: 10px;
+}

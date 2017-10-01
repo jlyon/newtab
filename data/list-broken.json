@@ -1,6 +1,14 @@
-// 'hexgl': {
-//   'type': 'github',
-//   'tag': 'game',
-//   'src': 'BKcore/HexGL',
-//   'code': 'https://raw.githubusercontent.com/BKcore/HexGL/master/index.html'
-// },
+{
+  "intersections": {
+    "type": "gist",
+    "tag": "interactive",
+    "src": "1718c90e4784aaf1143689ce142cb9a6",
+    "code": "https://gist.githubusercontent.com/1wheel/1718c90e4784aaf1143689ce142cb9a6/raw/da1772b82b8edb4f9b9fa9772ae8bcfdeddcaed2/index.html"
+  },
+  "hexgl": {
+    "type": "github",
+    "tag": "game",
+    "src": "BKcore/HexGL",
+    "code": "https://raw.githubusercontent.com/BKcore/HexGL/master/index.html"
+  }
+} 

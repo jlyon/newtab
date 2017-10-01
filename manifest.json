@@ -1,20 +1,25 @@
 {
   "manifest_version": 2,
 
-  "name": "New Tab Neato",
-  "description": "See something interesting every time you click New Tab.",
+  "name": "NewTab.Party",
+  "description": "See something interesting every time you click New Tab",
   "version": "1.0",
 
   "browser_action": {
-    "default_icon": "app/img/logo.png",
-    "default_popup": "app/popup.html"
+    "default_icon": "img/logo.png",
+    "default_popup": "suggest.html"
   },
   "chrome_url_overrides" : {
-    "newtab": "app/index.html"
+    "newtab": "view.html"
   },
   "permissions": [
     "storage",
+    "tabs",
+    "http://www.newtab.com/*",
+    "https://www.newtab.com/*",
     "https://api.github.com/*",
-    "https://cdn.rawgit.com/*"
+    "https://cdn.rawgit.com/*",
+    "https://api.flickr.com/*",
+    "https://*.staticflickr.com/*"
   ]
 }

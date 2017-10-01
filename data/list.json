@@ -9,19 +9,13 @@
     "type": "gist",
     "tag": "educational",
     "src": "4183330",
-    "code": "https://gist.githubusercontent.com/jlyon/979b62465328c39144f8c74ef5e93ef3/raw/26599fce8058dbd3a8150e6f893893184ce128f3/index.html"
+    "code": "https://gist.githubusercontent.com/jlyon/979b62465328c39144f8c74ef5e93ef3/raw/74e316701a5af7871c9b283f06601b04110b60fa/index.html"
   },
   "force-directed": {
     "type": "gist",
     "tag": "interactive",
     "src": "4062045",
     "code": "https://gist.githubusercontent.com/jlyon/ccf0f615e89b914f9ec96b5968b48215/raw/43bbf26b9cd9c5f8035c4671bc0dcb693a7f52f4/index.html"
-  },
-  "intersections": {
-    "type": "gist",
-    "tag": "interactive",
-    "src": "1718c90e4784aaf1143689ce142cb9a6",
-    "code": "https://gist.githubusercontent.com/1wheel/1718c90e4784aaf1143689ce142cb9a6/raw/da1772b82b8edb4f9b9fa9772ae8bcfdeddcaed2/index.html"
   },
   "gears": {
     "type": "gist",
@@ -60,17 +54,17 @@
     "src": "Hextris/hextris",
     "code": "http://raw.githubusercontent.com/Hextris/hextris/gh-pages/index.html"
   },
-  "0hh1": {
-    "type": "github",
-    "tag": "game",
-    "src": "Q42/0hh1",
-    "code": "https://cdn.rawgit.com/Q42/0hh1/master/index.html"
-  },
   "skifree": {
     "type": "github",
     "tag": "game",
     "src": "basicallydan/skifree.js",
     "code": "https://raw.githubusercontent.com/basicallydan/skifree.js/master/index.html"
+  },
+  "0hh1": {
+    "type": "github",
+    "tag": "game",
+    "src": "Q42/0hh1",
+    "code": "https://cdn.rawgit.com/Q42/0hh1/master/index.html"
   },
 
 
@@ -100,7 +94,7 @@
     "type": "flickr",
     "tag": "astronomy",
     "src": "12957444965",
-    "image": "https://farm3.staticflickr.com/2839/12957444965_c38adee4aa_k_d.jpg"
+    "image": "https://farm3.staticflickr.com/2839/12957444965_b688c78e41_o_d.jpg"
   },
   "star-making": {
     "type": "flickr",
@@ -121,18 +115,44 @@
     "src": "7960461442",
     "image": "https://farm9.staticflickr.com/8041/7960461442_2680d1ddbf_k_d.jpg"
   },
-  "river-canadian-rockies": {
-    "type": "flickr",
-    "tag": "outdoors",
-    "src": "9632732729",
-    "image": "https://farm4.staticflickr.com/3712/9632732729_455f0254b7_k_d.jpg"
-  },
   "hotel-nepal": {
     "type": "flickr",
     "tag": "outdoors",
     "src": "21769052343",
     "image": "https://farm6.staticflickr.com/5710/21769052343_ad445110c8_k_d.jpg"
+  },
+  "puppy-chester": {
+    "type": "flickr",
+    "tag": "cute",
+    "src": "15561148823",
+    "image": "https://farm9.staticflickr.com/8593/15561148823_67590377f5_k_d.jpg"
+  },
+  "cat-kitten": {
+    "type": "flickr",
+    "tag": "cute",
+    "src": "14192076767",
+    "image": "https://farm4.staticflickr.com/3861/14192076767_67d40c34bb_o_d.jpg"
+  },
+  "cheetas": {
+    "type": "flickr",
+    "tag": "cute",
+    "src": "29515526105",
+    "image": "https://farm9.staticflickr.com/8457/29515526105_e057cb530d_h_d.jpg"
+  },
+  "vina-sunset": {
+    "type": "flickr",
+    "tag": "travel",
+    "src": "7722183098",
+    "image": "https://farm9.staticflickr.com/8421/7722183098_a77f96e565_k_d.jpg"
+  },
+  "torres-del-paine": {
+    "type": "flickr",
+    "tag": "outdoors",
+    "src": "5344839665",
+    "image": "https://farm6.staticflickr.com/5161/5344839665_e372a7717a_o_d.jpg"
   }
+
+
 
 
 }
