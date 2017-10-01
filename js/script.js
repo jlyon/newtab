@@ -81,7 +81,7 @@ function showFlickr(item) {
   });
   console.log(item.src);
 
-  $.getJSON( 'https://api.flickr.com/services/rest/?method=flickr.photos.getInfo&api_key=b4bfee90f8d4ee9d0b9642803e17ea13&photo_id='+ item.src +'&format=json&nojsoncallback=1', function( data ) {
+  $.getJSON( 'https://api.flickr.com/services/rest/?method=flickr.photos.getInfo&api_key=ac684d54792f49a21a6b0b2e13bb76a5&photo_id='+ item.src +'&format=json&nojsoncallback=1', function( data ) {
     console.log(data);
     var description = data.photo.description._content;
     if (data.photo.location) {
