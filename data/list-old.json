@@ -1,5 +1,22 @@
 {
-
+  "vina-sunset": {
+    "type": "flickr",
+    "tag": "travel",
+    "src": "7722183098",
+    "image": "https://farm9.staticflickr.com/8421/7722183098_a77f96e565_k_d.jpg"
+  },
+  "0hh1": {
+    "type": "github",
+    "tag": "game",
+    "src": "Q42/0hh1",
+    "code": "https://cdn.rawgit.com/Q42/0hh1/master/index.html"
+  },
+  "hextris": {
+    "type": "github",
+    "tag": "game",
+    "src": "Hextris/hextris",
+    "code": "http://raw.githubusercontent.com/Hextris/hextris/gh-pages/index.html"
+  },
 
 
 }

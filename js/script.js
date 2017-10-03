@@ -1,7 +1,7 @@
 $('#iframe').css('height', window.innerHeight + 'px');
 
-$.getJSON('http://www.newtab.party/data/list.json', function( data ) {
-//$.getJSON('../data/list.json', function( data ) {
+//$.getJSON('http://www.newtab.party/data/list.json', function( data ) {
+$.getJSON('../data/list.json', function( data ) {
   display(data);
 });
 
@@ -40,12 +40,14 @@ function showGist(item) {
     if (item.code == undefined) {
       $('#iframe').attr('src', 'https://cdn.rawgit.com/mbostock/'+ item.src +'/raw/'+ data.history[0].version +'/index.html');
     }
+    var details = data.files['README.md'] ? data.files['README.md'].content : '';
+    details += data.files['.block'] ? '<p>'+ data.files['.block'].content.replace("\n", '<br/>') +'</p>' : '';
     setInfo({
       'icon': 'img/github.png',
       'name': data.description,
       'author': data.owner.login,
       'link': 'https://bl.ocks.org/'+ data.owner.login +'/'+ item.src,
-      'details': data.files['README.md'] ? data.files['README.md'].content : ''
+      'details': details
     });
 
   });
@@ -77,23 +79,26 @@ function showFlickr(item) {
   $('#iframe').hide();
   $('body').css({
     'background-image': 'url('+ item.image +')',
-    //'background-position-y': item['background-position-y'] ? item['background-position-y'] : 'center'
+    'background-position-y': item['background-position-y'] ? item['background-position-y'] : 'center'
   });
-  console.log(item.src);
 
   $.getJSON( 'https://api.flickr.com/services/rest/?method=flickr.photos.getInfo&api_key=ac684d54792f49a21a6b0b2e13bb76a5&photo_id='+ item.src +'&format=json&nojsoncallback=1', function( data ) {
     console.log(data);
     var description = data.photo.description._content;
     if (data.photo.location) {
-      var loc = data.photo.location.locality._content +', '+ data.photo.location.country._content;
+      var loc = data.photo.location.locality ? data.photo.location.locality._content +', ' : '';
+      loc += data.photo.location.country._content;
       description = '<div class="location"><a href="https://www.google.com/maps/?q='+ loc +'" title="View on Google Maps">'+ loc +'</a></div>' + description;
     }
+    var license = flickrLicense(data.photo.license);
+    license = license ? '<p><a href="'+ license.url +'" target="_blank">'+ license.name +'</a></p>' : '';
     setInfo({
       'icon': 'img/flickr.png',
       'name': data.photo.title._content,
       'author': data.photo.owner.realname ? data.photo.owner.realname : data.photo.owner.username,
       'link': data.photo.urls.url[0]._content,
-      'details': description
+      'details': description + license,
+      'text-color': item['text-color'] ? item['text-color'] : null
     });
 
   });
@@ -116,7 +121,14 @@ function showOther(item) {
       //'background-position-y': item['background-position-y'] ? item['background-position-y'] : 'center'
     });
   }
-  $('#loading').hide();
+  setInfo({
+    'icon': item.icon ? 'img/'+ item.icon +'.png' : null,
+    'name': item.name ? item.name : '',
+    'author': item.author ? item.author : '',
+    'link': item.link ? item.link : '',
+    'details': item.details ? item.details : '',
+    'text-color': item['text-color'] ? item['text-color'] : null
+  });
 }
 
 
@@ -127,14 +139,18 @@ function showOther(item) {
 
 function setInfo(data) {
   // Parse markdown links
-  // From https://stackoverflow.com/a/31192012
-
+  // From https://stackoverflow.com/a/31192012 (is it really tho?)
   var converter = new showdown.Converter();
   data.details = converter.makeHtml(data.details);
 
+  if (data.icon) {
+    $('#icon').attr('src', data.icon).show();
+  }
+  else {
+    $('#icon').hide();
+  }
 
-  console.log(data);
-  $('#icon').attr('src', data.icon);
+  $('.info-container, a').css('color', data['text-color'] ? data['text-color'] : '#333');
   $('#name').text(data.name);
   $('#author').text(data.author);
   $('#link').attr('href', data.link);
@@ -151,4 +167,22 @@ function pickRandomProperty(obj) {
     if (Math.random() < 1/++count)
       result = prop;
   return result;
+}
+
+
+function flickrLicense(num) {
+  var licenses = {
+    0: { "id": 0, "name": "All Rights Reserved", "url": "" },
+    4: { "id": 4, "name": "Attribution License", "url": "https:\/\/creativecommons.org\/licenses\/by\/2.0\/" },
+    6: { "id": 6, "name": "Attribution-NoDerivs License", "url": "https:\/\/creativecommons.org\/licenses\/by-nd\/2.0\/" },
+    3: { "id": 3, "name": "Attribution-NonCommercial-NoDerivs License", "url": "https:\/\/creativecommons.org\/licenses\/by-nc-nd\/2.0\/" },
+    2: { "id": 2, "name": "Attribution-NonCommercial License", "url": "https:\/\/creativecommons.org\/licenses\/by-nc\/2.0\/" },
+    1: { "id": 1, "name": "Attribution-NonCommercial-ShareAlike License", "url": "https:\/\/creativecommons.org\/licenses\/by-nc-sa\/2.0\/" },
+    5: { "id": 5, "name": "Attribution-ShareAlike License", "url": "https:\/\/creativecommons.org\/licenses\/by-sa\/2.0\/" },
+    7: { "id": 7, "name": "No known copyright restrictions", "url": "https:\/\/www.flickr.com\/commons\/usage\/" },
+    8: { "id": 8, "name": "United States Government Work", "url": "http:\/\/www.usa.gov\/copyright.shtml" },
+    9: { "id": 9, "name": "Public Domain Dedication (CC0)", "url": "https:\/\/creativecommons.org\/publicdomain\/zero\/1.0\/" },
+    10: { "id": 10, "name": "Public Domain Mark", "url": "https:\/\/creativecommons.org\/publicdomain\/mark\/1.0\/" }
+  };
+  return licenses[num] ? licenses[num] : null;
 }

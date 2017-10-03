@@ -13,11 +13,13 @@ body {
   background-size: cover;
   font-family: Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
   color: #333;
+  overflow: hidden;
 }
 iframe {
   width: 100%;
   height: 100%;
   border: 0;
+  overflow: hidden;
 }
 .info-container {
   position: absolute;
@@ -43,6 +45,10 @@ a {
 }
 .info-container:hover {
   background-color:rgba(255, 255, 255, 0.8);
+}
+.info-container:hover,
+.info-container:hover a {
+  color: #333 !important;
 }
 .info-container:hover .info-line {
   font-weight: bold;
