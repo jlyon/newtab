@@ -1,7 +1,7 @@
 $('#iframe').css('height', window.innerHeight + 'px');
 
-//$.getJSON('http://www.newtab.party/data/list.json', function( data ) {
-$.getJSON('../data/list.json', function( data ) {
+$.getJSON('http://www.newtab.party/data/list.json', function( data ) {
+//$.getJSON('../data/list.json', function( data ) {
   display(data);
 });
 
@@ -40,14 +40,13 @@ function showGist(item) {
     if (item.code == undefined) {
       $('#iframe').attr('src', 'https://cdn.rawgit.com/mbostock/'+ item.src +'/raw/'+ data.history[0].version +'/index.html');
     }
-    var details = data.files['README.md'] ? data.files['README.md'].content : '';
-    details += data.files['.block'] ? '<p>'+ data.files['.block'].content.replace("\n", '<br/>') +'</p>' : '';
     setInfo({
-      'icon': 'img/github.png',
+      'icon': 'github',
       'name': data.description,
       'author': data.owner.login,
       'link': 'https://bl.ocks.org/'+ data.owner.login +'/'+ item.src,
-      'details': details
+      'details': data.files['README.md'] ? data.files['README.md'].content : '',
+      'license': data.files['.block'] ?data.files['.block'].content.replace("\n", '<br/>') : ''
     });
 
   });
@@ -65,11 +64,13 @@ function showGithub(item) {
       $('#iframe').attr('src', 'https://cdn.rawgit.com/mbostock/'+ item.src +'/raw/'+ data.history[0].version +'/index.html');
     }
     setInfo({
-      'icon': 'img/github.png',
+      'icon': 'github',
       'name': data.name,
       'author': data.owner.login,
       'link': 'https://github.com/'+ item.src,
-      'details': data.description
+      'details': data.description,
+      'license': item.license ? item.license : '',
+      'text-color': item['text-color'] ? item['text-color'] : null
     });
 
   });
@@ -91,13 +92,13 @@ function showFlickr(item) {
       description = '<div class="location"><a href="https://www.google.com/maps/?q='+ loc +'" title="View on Google Maps">'+ loc +'</a></div>' + description;
     }
     var license = flickrLicense(data.photo.license);
-    license = license ? '<p><a href="'+ license.url +'" target="_blank">'+ license.name +'</a></p>' : '';
     setInfo({
-      'icon': 'img/flickr.png',
+      'icon': 'flickr',
       'name': data.photo.title._content,
       'author': data.photo.owner.realname ? data.photo.owner.realname : data.photo.owner.username,
       'link': data.photo.urls.url[0]._content,
-      'details': description + license,
+      'details': description,
+      'license': license ? '<a href="'+ license.url +'" target="_blank">'+ license.name +'</a>' : '',
       'text-color': item['text-color'] ? item['text-color'] : null
     });
 
@@ -122,11 +123,12 @@ function showOther(item) {
     });
   }
   setInfo({
-    'icon': item.icon ? 'img/'+ item.icon +'.png' : null,
+    'icon': item.icon ? item.icon : null,
     'name': item.name ? item.name : '',
     'author': item.author ? item.author : '',
     'link': item.link ? item.link : '',
     'details': item.details ? item.details : '',
+    'license': item.license ? item.license : '',
     'text-color': item['text-color'] ? item['text-color'] : null
   });
 }
@@ -144,10 +146,21 @@ function setInfo(data) {
   data.details = converter.makeHtml(data.details);
 
   if (data.icon) {
-    $('#icon').attr('src', data.icon).show();
-  }
-  else {
+    $('#icon').attr('class', 'service-logo fa fa-fw fa-' + data.icon).show();
+  } else {
     $('#icon').hide();
+  }
+
+  if (!data.author && !data.name) {
+    $('#info-line').hide();
+  } else {
+    $('#info-line').show();
+  }
+
+  if (!data.license || data.license == '') {
+    $('#license-wrapper').hide();
+  } else {
+    $('#license-wrapper').show();
   }
 
   $('.info-container, a').css('color', data['text-color'] ? data['text-color'] : '#333');
@@ -155,6 +168,7 @@ function setInfo(data) {
   $('#author').text(data.author);
   $('#link').attr('href', data.link);
   $('#details').html(data.details);
+  $('#license').html(data.license);
   $('#loading').hide();
   $('#info').fadeIn();
 }

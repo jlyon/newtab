@@ -6,6 +6,7 @@
   <meta name="description" content="See something interesting every time you click New Tab">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/marketing.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
 <body>
 
@@ -31,16 +32,19 @@
     <img src="img/logo.png" alt="New Tab Neato" width=16" height="16" /> Loading...
   </div>
   <div class="info hidden" id="info">
-    <div class="info-line">
-      <img src="img/logo.png" width="16" height="16" id="icon" />
+    <div class="info-line" id="info-line">
+      <i class="fa fa-fw service-logo" id="icon"></i>
       <a id="link" href="#" title="Visit the source"><span id="name" ></span></a> by <span id="author"></span>
     </div>
     <div class="details">
       <span id="details"></span>
+      <div class="license" id="license-wrapper">
+        <i class="fa fa-fw fa-creative-commons" aria-hidden="true"></i><span id="license"></span>
+      </div>
     </div>
   </div>
 </div>
-<iframe id="iframe"></iframe>
+<iframe id="iframe" scrolling="no"></iframe>
 
 
 <script src="js/jquery-3.2.1.min.js"></script>

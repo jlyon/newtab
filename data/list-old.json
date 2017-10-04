@@ -17,6 +17,12 @@
     "src": "Hextris/hextris",
     "code": "http://raw.githubusercontent.com/Hextris/hextris/gh-pages/index.html"
   },
+  "nps-starry-night": {
+    "type": "flickr",
+    "tag": "astronomy",
+    "src": "12957444965",
+    "image": "https://farm3.staticflickr.com/2839/12957444965_b688c78e41_o_d.jpg"
+  },
 
 
 }
