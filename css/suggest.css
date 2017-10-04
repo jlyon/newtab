@@ -1,0 +1,12 @@
+body.suggest {
+  height: auto;
+  padding: 10px;
+}
+
+a#suggest-link {
+  width: 220px;
+  text-decoration: none;
+  display: block;
+  outline: 0;
+  color: #333;
+}
