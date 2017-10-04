@@ -114,7 +114,8 @@
     "type": "flickr",
     "tag": "travel",
     "src": "37229286212",
-    "image": "https://farm5.staticflickr.com/4387/37229286212_db92183995_k_d.jpg"
+    "image": "https://farm5.staticflickr.com/4387/37229286212_db92183995_k_d.jpg",
+    "text-color": "white"
   },
   "byodo-in-temple": {
     "type": "flickr",
@@ -126,44 +127,44 @@
     "type": "flickr",
     "tag": "travel",
     "src": "36716679253",
-    "image": "https://farm5.staticflickr.com/4481/36716679253_fb3332806e_k_d.jpg"
-  },
-  "nps-starry-night": {
-    "type": "flickr",
-    "tag": "astronomy",
-    "src": "12957444965",
-    "image": "https://farm3.staticflickr.com/2839/12957444965_b688c78e41_o_d.jpg"
+    "image": "https://farm5.staticflickr.com/4481/36716679253_fb3332806e_k_d.jpg",
+    "text-color": "white"
   },
   "star-making": {
     "type": "flickr",
     "tag": "astronomy",
     "src": "6945160410",
-    "image": "https://farm8.staticflickr.com/7236/6945160410_9473d6b195_o_d.jpg"
+    "image": "https://farm8.staticflickr.com/7236/6945160410_9473d6b195_o_d.jpg",
+    "text-color": "white"
   },
   "rocket-stars": {
     "type": "flickr",
     "tag": "outdoors",
     "src": "15107031984",
     "image": "https://farm6.staticflickr.com/5612/15107031984_6d12960b29_k_d.jpg",
-    "background-position-y": "bottom"
+    "background-position-y": "bottom",
+    "text-color": "white"
   },
   "lake-canadian-rockies": {
     "type": "flickr",
     "tag": "outdoors",
     "src": "7960461442",
-    "image": "https://farm9.staticflickr.com/8041/7960461442_2680d1ddbf_k_d.jpg"
+    "image": "https://farm9.staticflickr.com/8041/7960461442_2680d1ddbf_k_d.jpg",
+    "text-color": "white"
   },
   "hotel-nepal": {
     "type": "flickr",
     "tag": "outdoors",
     "src": "21769052343",
-    "image": "https://farm6.staticflickr.com/5710/21769052343_ad445110c8_k_d.jpg"
+    "image": "https://farm6.staticflickr.com/5710/21769052343_ad445110c8_k_d.jpg",
+    "text-color": "white"
   },
   "puppy-chester": {
     "type": "flickr",
     "tag": "cute",
     "src": "15561148823",
-    "image": "https://farm9.staticflickr.com/8593/15561148823_67590377f5_k_d.jpg"
+    "image": "https://farm9.staticflickr.com/8593/15561148823_67590377f5_k_d.jpg",
+    "text-color": "white"
   },
   "cat-kitten": {
     "type": "flickr",
@@ -175,14 +176,16 @@
     "type": "flickr",
     "tag": "cute",
     "src": "29515526105",
-    "image": "https://farm9.staticflickr.com/8457/29515526105_e057cb530d_h_d.jpg"
+    "image": "https://farm9.staticflickr.com/8457/29515526105_e057cb530d_h_d.jpg",
+    "text-color": "white"
   },
 
   "torres-del-paine": {
     "type": "flickr",
     "tag": "outdoors",
     "src": "5344839665",
-    "image": "https://farm6.staticflickr.com/5161/5344839665_e372a7717a_o_d.jpg"
+    "image": "https://farm6.staticflickr.com/5161/5344839665_e372a7717a_o_d.jpg",
+    "text-color": "white"
   }
 
 
