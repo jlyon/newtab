@@ -23,6 +23,11 @@
     "src": "12957444965",
     "image": "https://farm3.staticflickr.com/2839/12957444965_b688c78e41_o_d.jpg"
   },
-
+  "usa-unemployment": {
+    "type": "gist",
+    "tag": "interactive",
+    "src": "4060606",
+    "code": "https://gist.githubusercontent.com/jlyon/b61162a479cd38d2d1e88bcfe5bdd514/raw/f9d9073b79525589a94e66dd4688c7159dca1ffb/index.html"
+  },
 
 }

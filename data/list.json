@@ -23,17 +23,11 @@
     "src": "1353700",
     "code": "https://gist.githubusercontent.com/jlyon/9810f08835691b7f4447ceaf52185b7f/raw/391c74e9c4f09caa87fe3c4ee3a895cee7c587bc/index.html"
   },
-  "usa-unemployment": {
-    "type": "gist",
-    "tag": "interactive",
-    "src": "4060606",
-    "code": "https://gist.githubusercontent.com/jlyon/b61162a479cd38d2d1e88bcfe5bdd514/raw/f9d9073b79525589a94e66dd4688c7159dca1ffb/index.html"
-  },
   "usa-airports": {
     "type": "iframe",
     "tag": "interactive",
     "src": "",
-    "code": "http://mbostock.github.io/d3/talk/20111116/airports.html",
+    "code": "https://mbostock.github.io/d3/talk/20111116/airports.html",
     "icon": "github"
   },
   "rainbow-worm": {
@@ -42,12 +36,43 @@
     "src": "4165404",
     "code": "https://gist.githubusercontent.com/jlyon/fde424fd99f7bcade12d64e9a4abc4ea/raw/7dd9f67ef50d16b0b8dddbcf3e9dfb4bab5e5771/index.html"
   },
+  "rainbow-worm": {
+    "type": "gist",
+    "tag": "interactive",
+    "src": "4165404",
+    "code": "https://gist.githubusercontent.com/jlyon/fde424fd99f7bcade12d64e9a4abc4ea/raw/7dd9f67ef50d16b0b8dddbcf3e9dfb4bab5e5771/index.html"
+  },
+  "red-balls": {
+    "type": "gist",
+    "tag": "interactive",
+    "src": "f35baff17a0316ad4ff6",
+    "code": "https://gist.githubusercontent.com/maartenzam/f35baff17a0316ad4ff6/raw/2a594dbeeeb10eaaca11863a15e36b118df7ec77/index.html"
+  },
+  "color-mesh": {
+    "type": "gist",
+    "tag": "interactive",
+    "src": "ebec037138b5866ff0d3",
+    "text-color": "white",
+    "code": "https://gist.githubusercontent.com/syntagmatic/ebec037138b5866ff0d3/raw/e2d026e2a3f5d2b0b0fff344a1560823e200d977/index.html"
+  },
+  "the-spins": {
+    "type": "gist",
+    "tag": "interactive",
+    "src": "b3dcf273c3c6d56411b6",
+    "code": "https://gist.githubusercontent.com/enjalot/b3dcf273c3c6d56411b6/raw/d01821a6ae8e6e78681984fdfc52aa7f2fa4eb14/index.html"
+  },
+
+
+
+
+
+
 
 
   "n-body": {
     "type": "iframe",
     "tag": "interactive",
-    "code": "http://mbostock.github.io/protovis/ex/nbody-full.html",
+    "code": "https://new-tab-neato.github.io/protovis/ex/nbody-full.html",
     "name": "N-Body Problem",
     "author": "Mike Bostock",
     "link": "http://mbostock.github.io/protovis/ex/nbody.html",
@@ -59,7 +84,7 @@
   "polar-clock": {
     "type": "iframe",
     "tag": "interactive",
-    "code": "http://mbostock.github.io/protovis/ex/clock-full.html",
+    "code": "https://new-tab-neato.github.io/protovis/ex/clock-full.html",
     "name": "PolarClock",
     "author": "Mike Bostock",
     "link": "http://mbostock.github.io/protovis/ex/nbody.html",
@@ -68,6 +93,16 @@
     "icon": "github"
   },
 
+  "tetris": {
+    "type": "iframe",
+    "tag": "interactive",
+    "code": "http://d3tetris.herokuapp.com/",
+    "name": "Tetris",
+    "author": "Nikolay Smirnov",
+    "link": "https://github.com/d3/d3/wiki/Gallery",
+    "details": "The classic game, written in D3.",
+    "icon": "github"
+  },
 
 
 
@@ -86,7 +121,7 @@
     "type": "github",
     "tag": "game",
     "src": "wwwtyro/Astray",
-    "code": "http://wwwtyro.github.io/Astray/",
+    "code": "http://new-tab-neato.github.io/Astray/",
     "text-color": "white"
   },
   "skifree": {
@@ -179,12 +214,59 @@
     "image": "https://farm9.staticflickr.com/8457/29515526105_e057cb530d_h_d.jpg",
     "text-color": "white"
   },
-
   "torres-del-paine": {
     "type": "flickr",
     "tag": "outdoors",
     "src": "5344839665",
     "image": "https://farm6.staticflickr.com/5161/5344839665_e372a7717a_o_d.jpg",
+    "text-color": "white"
+  },
+  "trinidad-bicycle": {
+    "type": "flickr",
+    "tag": "travel",
+    "src": "16064396131",
+    "image": "https://farm8.staticflickr.com/7465/16064396131_1023e4e4db_k_d.jpg",
+    "text-color": "white"
+  },
+  "italy-alps": {
+    "type": "flickr",
+    "tag": "outdoors",
+    "src": "19954826630",
+    "image": "https://farm4.staticflickr.com/3772/19954826630_6c046fe20c_o_d.jpg",
+    "text-color": "white"
+  },
+  "norway-fjord": {
+    "type": "flickr",
+    "tag": "outdoors",
+    "src": "20541229285",
+    "image": "https://farm6.staticflickr.com/5161/5344839665_e372a7717a_o_d.jpg",
+    "text-color": "white"
+  },
+  "chile-cave": {
+    "type": "flickr",
+    "tag": "outdoors",
+    "src": "8413127928",
+    "image": "https://farm9.staticflickr.com/8213/8413127928_45a5f346ef_k_d.jpg",
+    "text-color": "white"
+  },
+  "old-car": {
+    "type": "flickr",
+    "tag": "travel",
+    "src": "8266185111",
+    "image": "https://farm9.staticflickr.com/8065/8266185111_e0742f06e0_k_d.jpg"
+  },
+  "nyc-sunset": {
+    "type": "flickr",
+    "tag": "travel",
+    "src": "3056953388",
+    "image": "https://farm4.staticflickr.com/3165/3056953388_5e9b424deb_o_d.jpg",
+    "text-color": "white"
+  },
+  "relaxed-leopard": {
+    "type": "flickr",
+    "tag": "travel",
+    "src": "6066343111",
+    "image": "https://farm7.staticflickr.com/6062/6066343111_75987d113b_o_d.jpg",
     "text-color": "white"
   }
 

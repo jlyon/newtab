@@ -1,14 +1,20 @@
 $('#iframe').css('height', window.innerHeight + 'px');
 
-$.getJSON('http://www.newtab.party/data/list.json', function( data ) {
-//$.getJSON('../data/list.json', function( data ) {
+//$.getJSON('http://www.newtab.party/data/list.json', function( data ) {
+$.getJSON('../data/list.json', function( data ) {
   display(data);
 });
+
+$('#btn-reload').bind('click', function(e){
+  window.location.reload();
+  e.preventDefault();
+})
 
 
 
 function display(list) {
   var item = window.location.hash ? list[window.location.hash.replace('#', '')] : list[pickRandomProperty(list)];
+  //console.log(item);
 
   switch (item.type) {
     case 'gist':
@@ -46,7 +52,8 @@ function showGist(item) {
       'author': data.owner.login,
       'link': 'https://bl.ocks.org/'+ data.owner.login +'/'+ item.src,
       'details': data.files['README.md'] ? data.files['README.md'].content : '',
-      'license': data.files['.block'] ?data.files['.block'].content.replace("\n", '<br/>') : ''
+      'license': data.files['.block'] ?data.files['.block'].content.replace("\n", '<br/>') : '',
+      'text-color': item['text-color'] ? item['text-color'] : null
     });
 
   });
@@ -84,7 +91,7 @@ function showFlickr(item) {
   });
 
   $.getJSON( 'https://api.flickr.com/services/rest/?method=flickr.photos.getInfo&api_key=ac684d54792f49a21a6b0b2e13bb76a5&photo_id='+ item.src +'&format=json&nojsoncallback=1', function( data ) {
-    console.log(data);
+    //console.log(data);
     var description = data.photo.description._content;
     if (data.photo.location) {
       var loc = data.photo.location.locality ? data.photo.location.locality._content +', ' : '';

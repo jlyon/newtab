@@ -10,5 +10,12 @@
     "tag": "game",
     "src": "BKcore/HexGL",
     "code": "https://raw.githubusercontent.com/BKcore/HexGL/master/index.html"
-  }
+  },
+  // Needs width+height to be set
+  "sketchy-network": {
+    "type": "gist",
+    "tag": "interactive",
+    "src": "bc38c32d24e6fba4db84",
+    "code": "https://gist.githubusercontent.com/jlyon/1869a543afe081c1a30f7b0f1a9dac2f/raw/75361439f4d9499921f0fd5ea37fa46d941257a3/index.html"
+  },
 } 
