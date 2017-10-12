@@ -93,6 +93,10 @@
     "icon": "github"
   },
 
+
+
+
+
   "tetris": {
     "type": "iframe",
     "tag": "interactive",
@@ -103,14 +107,6 @@
     "details": "The classic game, written in D3.",
     "icon": "github"
   },
-
-
-
-
-
-
-
-
   "skifree": {
     "type": "github",
     "tag": "game",
@@ -124,17 +120,19 @@
     "code": "http://new-tab-neato.github.io/Astray/",
     "text-color": "white"
   },
-  "skifree": {
+  "breakout": {
     "type": "github",
     "tag": "game",
-    "src": "basicallydan/skifree.js",
-    "code": "https://raw.githubusercontent.com/basicallydan/skifree.js/master/index.html"
+    "src": "jakesgordon/javascript-breakout",
+    "code": "https://raw.githubusercontent.com/jakesgordon/javascript-breakout/master/index.html",
+    "license-link": "https://github.com/jakesgordon/javascript-breakout/blob/master/LICENSE"
   },
-  "skifree": {
+  "missile-game": {
     "type": "github",
     "tag": "game",
-    "src": "basicallydan/skifree.js",
-    "code": "https://raw.githubusercontent.com/basicallydan/skifree.js/master/index.html"
+    "src": "bwhmather/missile-game",
+    "code": "https://raw.githubusercontent.com/bwhmather/missile-game/master/index.html",
+    "license": "GNU Affero General Public License v3.0"
   },
 
 
@@ -253,7 +251,8 @@
     "type": "flickr",
     "tag": "travel",
     "src": "8266185111",
-    "image": "https://farm9.staticflickr.com/8065/8266185111_e0742f06e0_k_d.jpg"
+    "image": "https://farm9.staticflickr.com/8065/8266185111_e0742f06e0_k_d.jpg",
+    "text-color": "white"
   },
   "nyc-sunset": {
     "type": "flickr",
